@@ -1,0 +1,21 @@
+const wheelData = [
+  {
+    class: 'choice1',
+    content: 'Projects',
+  },
+  {
+    class: 'choice2',
+    content: 'About me',
+
+  },
+  {
+    class: 'choice3',
+    content: 'Skills',
+  },
+  {
+    class: 'choice4',
+    content: 'Expériences',
+  },
+];
+
+export default wheelData;

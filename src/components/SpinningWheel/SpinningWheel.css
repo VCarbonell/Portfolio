@@ -1,0 +1,87 @@
+@import '../../App.css';
+
+@keyframes spinAnim {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(var(--spinRotate));
+  }
+}
+
+.SpinningWheelContainer {
+  height: 30vw;
+  width: 30vw;
+  border-radius: 30vw;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+.SpinningWheelCloser {
+  height: 27vw;
+  width: 27vw;
+  border-radius: 27vw;
+  background-color: grey;
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.choices {
+  z-index: 2;
+  width: 0;
+  height: 0;
+  border-left: 6vw solid transparent;
+  position: absolute;
+  border-right: 6vw solid transparent;
+  box-sizing: content-box;
+}
+
+.choice1 {
+  transform: translate(-7vw, 0) rotate(-90deg);
+  border-top: 14vw solid red;
+}
+.choice2 {
+  transform: translate(0, -7vw) rotate(0deg);
+  border-top: 14vw solid green;
+}
+.choice3 {
+  transform: translate(7vw, 0) rotate(90deg);
+  border-top: 14vw solid purple;
+}
+.choice4 {
+  transform: translate(0, 7vw) rotate(180deg);
+  border-top: 14vw solid yellow;
+}
+
+.four, .secondFour {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.secondFour {
+  transform: rotate(135deg);
+}
+
+.selector {
+  z-index: 10;
+  position: relative;
+  height: 0;
+  width: 0;
+  bottom: 14vw;
+  border-top: 2.5vw solid black;
+  border-left: 1vw solid transparent;
+  border-right: 1vw solid transparent;
+}
+
+.spinAnim {
+  animation: spinAnim 3s ease-out forwards;
+}
